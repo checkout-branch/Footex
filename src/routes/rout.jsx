@@ -1,9 +1,15 @@
 
+import Header from "../Layout/Header/Header"
 
-const rout = () => {
+
+const MainComponent = () => {
   return (
-    <div>rout</div>
+    <div>
+        <Header/>
+
+
+    </div>
   )
 }
 
-export default rout
+export default MainComponent
