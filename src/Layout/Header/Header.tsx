@@ -1,5 +1,5 @@
-import ReactUsestate, { useState } from 'react'
-import React from 'react'
+
+import React, { useState } from 'react'
 import styles from "./Header.module.scss";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
