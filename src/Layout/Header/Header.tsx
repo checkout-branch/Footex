@@ -24,7 +24,7 @@ const Header = () => {
         <button className={styles.topButtons}><a href="https://api.whatsapp.com/send/?phone=919656060874&text&type=phone_number&app_absent=0" className={styles.socialLink} target="_blank" rel="noopener noreferrer">
           <FaWhatsapp className={styles.icon} />
         </a></button>
-        <button className={styles.topButtons}  onClick={toggleSidebar}><RxHamburgerMenu className={styles.icon} /></button>
+        <button className={styles.topButtons}  onClick={toggleSidebar}><RxHamburgerMenu className={isSidebarOpen?styles.menuIconRotate: styles.icon} /></button>
       </div>
     </header>
     <Sidebar isOpen={isSidebarOpen} />
