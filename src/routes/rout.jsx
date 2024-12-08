@@ -10,9 +10,6 @@ const MainComponent = () => {
         <Header/>
         <LiveCount/>
         <OfferSection/>
-
-
-
     </div>
   )
 }
