@@ -1,0 +1,73 @@
+.offerContainer {
+    display: flex; /* Use flexbox to arrange the items side by side */
+    justify-content: center; /* Space out the items */
+    align-items: center; /* Vertically center the items */
+    width: 90%;
+padding: 40px 0px 0px 0px;
+    margin: auto;
+    height: 50vh;
+
+    align-items: center; /* Adjust based on your design needs */
+    justify-content: center;
+}
+
+.offerImage {
+    width: 50%; /* Adjust width as needed */
+    height: 100%;
+    border-radius: 10px 0px 0px 10px;
+    object-fit: fill; /* Ensures the image covers the container */
+}
+
+.timerContainer {
+    width: 50%; 
+  
+    padding: 20px;
+    height: 100%;
+    border-radius: 0px 10px 10px 0px;
+    background-color: var(--color-demo);
+    color: var(--color-white);
+   display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+    text-align: center;
+}
+
+.dealText {
+    font-size: 18px;
+    margin-bottom: 10px;
+    
+}
+
+.timerText {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.timerLabels {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.timerLabelsChildren {
+    margin: 0 5px;
+    font-size: 14px;
+}
+
+.claimButton {
+    
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.claimButton:hover {
+    
+    background-color: var(--color-demo);
+}

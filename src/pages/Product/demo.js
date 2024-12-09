@@ -1,0 +1,41 @@
+export const ProductsList  = [
+    {
+        "id":"1",
+        "imageUrl":"https://footex.in/Products/nike7.jpg",
+        "price":699,
+        "brand":"Nike",
+    },
+    {
+        "id":"2",
+        "imageUrl":"https://footex.in/Products/bmw1.jpg",
+        "price":699,
+        "brand":"Nike",
+    },
+    {
+        "id":"4",
+        "imageUrl":"https://footex.in/Products/pumawb.jpg",
+        "price":699,
+        "brand":"Nike",
+        "extra":50,
+    },
+    {
+        "id":"6",
+        "imageUrl":"https://footex.in/Products/nike8.jpg",
+        "price":699,
+        "brand":"Nike",
+        "extra":50,
+    },
+    {
+        "id":"7",
+        "imageUrl":"https://footex.in/Products/boot1.jpg",
+        "price":699,
+        "brand":"Nike",
+    },
+    {
+        "id":"8",
+        "imageUrl":"https://footex.in/Products/clothnike2.jpg",
+        "price":699,
+        "brand":"Nike",
+    },
+
+]

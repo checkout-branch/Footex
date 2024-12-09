@@ -1,0 +1,338 @@
+/* images.module.scss */
+.galleryContainer {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  width: 90%;
+  margin: auto;
+
+  h1 {
+
+    margin-bottom: 20px;
+    color: var(--color-secondary);
+  }
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+.productItems{
+  text-align: center;
+  display: flex;
+
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background-color: var(--color-primery);
+  padding: 15px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 5px;
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  // Ensure product item takes full width on smaller screens
+
+}
+.productItem {
+  text-align: center;
+  display: flex;
+
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background-color: var(--color-primery);
+  padding: 15px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  // Ensure product item takes full width on smaller screens
+  width: 100%;
+}
+
+.productImage {
+  width: 100%;
+  object-fit: fill;
+  height: 250px;
+  border-radius: 8px;
+}
+
+.productBrand {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.productPrice {
+  color: #888;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.addToCartButton {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border: none;
+  font-weight: bold;
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+/* Adjustments for smaller devices */
+@media (max-width: 768px) {
+  .galleryContainer {
+    width: 100%;
+    padding: 10px;
+  }
+  .extra{
+    font-size: 10px;
+  }
+  .productGrid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .productItem {
+    padding: 10px;
+  }
+
+  .addToCartButton {
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .productGrid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .productItem {
+    padding: 8px;
+  }
+
+  .addToCartButton {
+    padding: 8px 10px;
+  }
+}
+
+.storeData {
+  font-size: 1.5rem;
+  color: #333;
+  background-color: #f8f9fa;
+  text-align: center;
+  padding: 20px;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Cart Icons - Ensure they stay centered in all devices */
+.cartIcons {
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.routeButton {
+  height: 50px;
+  font-size: 30px;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  width: 50px;
+  border: none;
+  z-index: 99999;
+  border-radius: 100px;
+  font-weight: bold;
+  padding: 0 20px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 70px;
+  right: 5%;
+  transform: translateX(-50%);
+}
+
+/* Store Container */
+.storeContainer {
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.storeWrap {
+  background-color: var(--color-secondary);
+  height: 70vh;
+  border-radius: 10px;
+  
+  width: 90%;
+}
+
+.store {
+  width: 100%;
+  height: 100vh;
+
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--color-white);
+}
+
+.productItem {
+  margin: 5px 0;
+}
+
+.totalPrice {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.productItem {
+  position: relative;
+}
+
+.extra {
+  position: absolute;
+  background-color: red;
+  padding: 5px;
+  font-weight: bold;
+  color: var(--color-white);
+  border-radius: 5px;
+  width: 105%; /* Adjust the width */
+  
+  top: 10px;
+  font-size: 10px;
+  
+  left: 50%; /* Centers the element horizontally */
+  transform: translateX(-50%); /* Adjusts to ensure it's centered properly */
+}
+.textDemo {
+  color: var(--color-white);
+  background-color: red;
+  padding: 5px;
+  border-radius: 10px;
+  font-weight: bold;
+  border: 2px solid black; /* Initial border color */
+  transition: border 0.3s ease; /* Smooth transition for border color */
+  animation: borderColorChange 1s infinite;
+  margin-top: 10px;
+}
+
+.textDemo:hover {
+  border: 2px solid blue; /* Border color when hovered */
+}
+
+@keyframes borderColorChange {
+  0% {
+    border-color: red; /* Initial border color */
+  }
+  50% {
+    border-color: yellow; /* Midway color */
+  }
+  100% {
+    border-color: blue; /* Final border color */
+  }
+}
+
+.textDemo:focus {
+  animation: borderColorChange 1s infinite; /* Animation when the button is focused */
+}
+
+
+.setMax{
+  display: flex;
+  width: 100%;
+
+  align-items: center;
+  justify-content: center;
+}
+.setMaxcol{
+  display: flex;
+  width: 100%;
+ flex-direction: column;
+}
+.imageWrap{
+  position: relative;
+}
+// .demoextra{
+//   position: absolute;
+//   top: 0;
+//   margin-bottom: 0px;
+// }
+.priceWrap{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.productItemlist{
+  width: 100%;
+  display: flex;
+}
+.storeImage{
+  height: 100px;
+  width: 100px;
+
+  border-radius: 5px;
+  object-fit: fill;
+}
+.storeDatats{
+display: flex;
+width: 100%;
+grid-template-columns: 1fr 1fr;
+
+}
+.datas{
+  display: flex;
+  padding: 10px;
+  width: 100%;
+  flex-direction: column;
+
+  color: black;
+
+}
+
+.extraStore{
+  background: red;
+  font-weight: bold;
+  color: var(--color-white);
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.btn{
+  background-color: var(--color-primery);
+  color: var(--color-secondary);
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 10px;
+}

@@ -1,3 +1,110 @@
-.header{
-    color: red;
+
+.navbar {
+    position: fixed;
+    top: 0; /* Fix the navbar to the top */
+    left: 50%; /* Position the left edge of the navbar at the center */
+    transform: translateX(-50%); /* Adjust to center the navbar */
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-primery);
+    height: 80px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    width: 90%; /* Navbar will take 90% of the width on desktop */
+}
+
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo{
+    height: 90px;
+}
+
+.navbar .menu {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .menuItem {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.navbar .menuItem:hover {
+    color: var(--color-primery);
+}
+
+.navbar .menuToggle {
+    display: none;
+    cursor: pointer;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initially hidden off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: var(--color-primery); /* Set the background color */
+    padding: 20px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    left: 0; /* Show the sidebar when active */
+}
+
+.sidebar .closeBtn {
+    font-size: 30px;
+    color: var(--color-white);
+    cursor: pointer;
+    text-align: right;
+}
+
+.sidebar .menu {
+    margin-top: 50px;
+}
+
+.sidebar .menuItem {
+    font-size: 20px;
+    color: var(--color-white);
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.sidebar .menuItem:hover {
+    color: var(--color-secondary);
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+    .navbar {
+        width: 100%; /* Navbar will take 100% width on mobile */
+        padding: 0px; /* Adjust padding as necessary */
+    }
+
+    .navbar .menu {
+        display: none; /* Hide regular menu on mobile */
+    }
+
+    .navbar .menuToggle {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .sidebar {
+        width: 100%;
+        left: -100%; /* Initially hidden off-screen on mobile */
+    }
+
+    .sidebar.active {
+        left: 0; /* Show the sidebar on mobile */
+    }
 }

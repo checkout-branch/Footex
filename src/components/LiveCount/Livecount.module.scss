@@ -1,0 +1,12 @@
+.livecount {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background-color: var(--color-secondary);
+    color: var(--color-primery);
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
